@@ -23,16 +23,12 @@ fn main() {
     let mut out = File::create(&dist).expect("failed to create file");
     copy(&mut resp, &mut out).expect("failed to copy content");
 
-    println!("cargo:warning=Downloaded {}", dist);
-
     let dist = File::open(dist).unwrap();
     let dist = GzDecoder::new(dist);
     let mut dist = Archive::new(dist);
     let unpack_path = env::var("OUT_DIR").unwrap() + "/swagger-ui-dist/";
     dist.unpack(&unpack_path).unwrap();
     let dist = unpack_path + "/package";
-
-    println!("cargo:warning=Unpacked to {}", dist);
 
     let trash = [
         "absolute-path.js",
@@ -52,8 +48,6 @@ fn main() {
     for file in &trash {
         remove_file(format!("{}/{}", dist, file)).unwrap();
     }
-
-    println!("cargo:warning=Done!");
 
     println!("cargo:rustc-env=SWAGGER_UI_DIST_PATH={}", dist);
 }

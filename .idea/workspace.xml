@@ -2,10 +2,22 @@
 <project version="4">
   <component name="CargoProjects">
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+    <cargoProject FILE="$PROJECT_DIR$/examples/rocket-swagger-ui/Cargo.toml" />
+    <cargoProject FILE="$PROJECT_DIR$/examples/rocker-swagger-ui/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Added rust-embed to pack swagger-ui assets into binary">
+    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="First working version">
+      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/examples/openapi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/handlers.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/swagger-ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/swagger-ui.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/build.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +45,31 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/examples" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
   </component>
-  <component name="RunManager" selected="Cargo.test swagger-ui">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\rs\swagger-ui\examples" />
+      <recent name="C:\projects\rs\swagger-ui\examples\rocker-swagger-ui" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cargo.examples/rocket-swagger-ui">
+    <configuration name="examples/rocket-swagger-ui" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="run --package rocket-swagger-ui --example basic" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test rocket-swagger-ui" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="test --package rocket-swagger-ui --lib tests" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -70,7 +103,13 @@
     <list>
       <item itemvalue="Cargo.test swagger-ui" />
       <item itemvalue="Cargo.test rocket-swagger-ui" />
+      <item itemvalue="Cargo.examples/rocket-swagger-ui" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo.examples/rocket-swagger-ui" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -127,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616325783633</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added metadata to rocket-swagger-ui">
+      <created>1616325830855</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616325830855</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +195,8 @@
     <MESSAGE value="Added build script to download swagger-ui-dist" />
     <MESSAGE value="Added rust-embed to pack swagger-ui assets into binary" />
     <MESSAGE value="Refactoring; added rocket-* crate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring; added rocket-* crate" />
+    <MESSAGE value="Added metadata to rocket-swagger-ui" />
+    <MESSAGE value="First working version" />
+    <option name="LAST_COMMIT_MESSAGE" value="First working version" />
   </component>
 </project>
