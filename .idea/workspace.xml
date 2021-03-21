@@ -6,15 +6,11 @@
     <cargoProject FILE="$PROJECT_DIR$/examples/rocker-swagger-ui/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Refactoring">
-      <change afterPath="$PROJECT_DIR$/swagger-ui/examples/basic.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/swagger-ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/swagger-ui.iml" afterDir="false" />
+    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Updated readme's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/examples/openapi.json" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/examples/openapi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +51,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../reqwest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/swagger-ui" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\rs\swagger-ui\swagger-ui" />
       <recent name="C:\projects\rs\swagger-ui\examples" />
       <recent name="C:\projects\rs\swagger-ui\examples\rocker-swagger-ui" />
     </key>
@@ -302,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616348062170</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Refactoring. Added example">
+      <created>1616348674068</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1616348674068</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,6 +342,8 @@
     <MESSAGE value="Updated tests" />
     <MESSAGE value="Bumped version" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Refactoring. Added example" />
+    <MESSAGE value="Updated readme's" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated readme's" />
   </component>
 </project>
