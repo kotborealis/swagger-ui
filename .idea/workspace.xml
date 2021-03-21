@@ -8,7 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Added github workflow">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/Cargo.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
