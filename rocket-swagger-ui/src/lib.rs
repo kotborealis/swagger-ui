@@ -112,12 +112,14 @@ mod tests {
 
         let mut response = client.get("/api/v1/swagger/openapi.json").dispatch();
         assert_eq!(response.status(), Status::Ok);
+
+        let path = env!("CARGO_MANIFEST_DIR").to_string() + "/examples/openapi.json";
+
+        println!("Loading {}", path);
+
         assert_eq!(
             response.body_string().unwrap(),
-            String::from_utf8(std::fs::read(
-                    env!("CARGO_MANIFEST_DIR").to_string()
-                        + "./examples/openapi.json"
-            ).unwrap()).unwrap()
+            String::from_utf8(std::fs::read(path).unwrap()).unwrap()
         );
     }
 }
