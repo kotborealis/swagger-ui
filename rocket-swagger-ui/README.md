@@ -1,4 +1,4 @@
 # rocket-swagger-ui
 
-See [https://docs.rs/swagger-ui/](https://docs.rs/swagger-ui/) and 
-[https://docs.rs/rocket-swagger-ui/](https://docs.rs/rocket-swagger-ui/) for details. 
+This crate is a part of [swagger-ui](https://crates.io/crates/swagger-ui).
+Please see it for instructions. 
