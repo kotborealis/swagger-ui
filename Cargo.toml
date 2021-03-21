@@ -11,4 +11,9 @@ license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[build-dependencies]
+reqwest = "0.7.3"
+flate2 = "1.0.20"
+tar = "0.4.33"
+
 [dependencies]
