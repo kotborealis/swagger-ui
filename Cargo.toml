@@ -3,6 +3,9 @@ name = "swagger-ui"
 version = "0.1.0"
 authors = ["kotborealis <kotborealis@awooo.ru>"]
 edition = "2018"
+exclude = [
+    ".idea"
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
