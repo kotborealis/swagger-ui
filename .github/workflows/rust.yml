@@ -15,6 +15,9 @@ jobs:
           override: true
           components: rustfmt, clippy
 
+      - name: Install openssl
+        run: sudo apt-get install libssl-dev
+
       - name: Run cargo check
         uses: actions-rs/cargo@v1
         with:
