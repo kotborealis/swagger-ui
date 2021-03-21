@@ -9,6 +9,8 @@ embeds it into your binary, using [rust-embed](https://crates.io/crates/rust-emb
 
 It also provides bindings for [rocket](https://rocket.rs).
 
+![swagger-ui petstore](./doc/swagger-ui.png)
+
 ## Usage
 
 ### Rocket
