@@ -7,16 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="First working version">
-      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/examples/openapi.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/handlers.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/swagger-ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/swagger-ui.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/build.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +27,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="c1grhg1c" />
@@ -173,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616325830855</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="First working version">
+      <created>1616336395746</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616336395746</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

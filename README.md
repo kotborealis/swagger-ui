@@ -1,3 +1,17 @@
+# swagger-ui
+
+Rust library to render OpenAPI specification file 
+using swagger-ui.
+
+## Basic usage
+
+### Rocket
+
+This library provides bindings for `rocket`, 
+see [./rocket-swagger-ui/examples/basic.rs](rocket-swagger-ui/examples/basic.rs)
+for a full example:
+
+```rust
 #![feature(proc_macro_hygiene, decl_macro)]
 
 extern crate rocket;
@@ -17,3 +31,4 @@ fn main() {
         )
         .launch();
 }
+```

@@ -1,5 +1,6 @@
 use rust_embed::RustEmbed;
 
+/// Assets from swagger-ui-dist
 #[derive(RustEmbed)]
 #[folder = "$SWAGGER_UI_DIST_PATH"]
 pub struct SwaggerUiAssets;
@@ -57,11 +58,16 @@ pub enum Filter {
     Str(String),
 }
 
+/// Used to represent openapi specification file
 pub struct Spec {
+    /// Spec file name
     pub name: String,
+    /// Spec file content
     pub content: &'static [u8]
 }
 
+/// Macro used to create `Spec` struct,
+/// loads file using `include_bytes!`
 #[macro_export]
 macro_rules! swagger_spec_file {
     ($name: literal) => {
@@ -72,6 +78,7 @@ macro_rules! swagger_spec_file {
     };
 }
 
+/// Swagger UI configuration
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Config {
