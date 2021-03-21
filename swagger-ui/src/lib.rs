@@ -1,11 +1,10 @@
 use rust_embed::RustEmbed;
+use serde::{Deserialize, Serialize};
 
 /// Assets from swagger-ui-dist
 #[derive(RustEmbed)]
 #[folder = "$SWAGGER_UI_DIST_PATH"]
 pub struct SwaggerUiAssets;
-
-use serde::{Deserialize, Serialize};
 
 /// Contains a named url.
 #[derive(Debug, Clone, Deserialize, Serialize)]
