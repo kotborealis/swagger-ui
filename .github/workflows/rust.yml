@@ -16,7 +16,7 @@ jobs:
           components: rustfmt, clippy
 
       - name: Install openssl
-        run: sudo apt-get install libssl-dev
+        run: sudo apt-get install pkg-config libssl-dev
 
       - name: Run cargo check
         uses: actions-rs/cargo@v1
