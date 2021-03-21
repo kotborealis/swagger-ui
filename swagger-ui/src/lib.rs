@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 /// Assets from swagger-ui-dist
 #[derive(RustEmbed)]
 #[folder = "$SWAGGER_UI_DIST_PATH"]
-pub struct SwaggerUiAssets;
+pub struct Assets;
 
 /// Contains a named url.
 #[derive(Debug, Clone, Deserialize, Serialize)]
@@ -161,7 +161,7 @@ impl Default for Config {
 #[cfg(test)]
 mod tests {
     use std::path::Path;
-    use crate::SwaggerUiAssets;
+    use crate::Assets;
 
     fn asset_list() -> [&'static str; 8] {
         [
@@ -195,7 +195,7 @@ mod tests {
         println!("Checking if assets exists in binary");
         for asset in &asset_list() {
             println!("\t{}", asset);
-            let data = SwaggerUiAssets::get(&asset).unwrap();
+            let data = Assets::get(&asset).unwrap();
             assert!(!data.is_empty());
         }
     }

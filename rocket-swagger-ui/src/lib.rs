@@ -3,7 +3,7 @@ mod handlers;
 use rocket::http::{ContentType};
 use rocket::{Route};
 use crate::handlers::{ContentHandler, RedirectHandler};
-use swagger_ui::{SwaggerUiAssets, Config, Spec, mime_type};
+use swagger_ui::{Assets, Config, Spec};
 use std::path::Path;
 
 fn mime_type(filename: &str) -> ContentType {
@@ -45,11 +45,11 @@ pub fn routes(spec: Spec, mut config: Config) -> Vec<Route> {
         RedirectHandler::to("index.html").into_route("/"),
     ];
 
-    for file in SwaggerUiAssets::iter() {
+    for file in Assets::iter() {
         let filename = file.as_ref();
         let mime_type = mime_type(filename);
 
-        let content: Vec<u8> = SwaggerUiAssets::get(filename).unwrap().into_owned();
+        let content: Vec<u8> = Assets::get(filename).unwrap().into_owned();
 
         let path = format!("/{}", filename);
         let handler = ContentHandler::bytes(mime_type, content);
@@ -73,7 +73,7 @@ mod tests {
                    super::routes(
                        // Specify file with openapi specification,
                        // relative to current file
-                       swagger_ui::swagger_spec_file!("../examples/openapi.json"),
+                       swagger_ui::swagger_spec_file!("../../swagger-ui/examples/openapi.json"),
                        swagger_ui::Config { ..Default::default() },
                    ),
             )
@@ -95,7 +95,7 @@ mod tests {
         let mut response = client.get("/api/v1/swagger/openapi.json").dispatch();
         assert_eq!(response.status(), Status::Ok);
 
-        let path = env!("CARGO_MANIFEST_DIR").to_string() + "/examples/openapi.json";
+        let path = env!("CARGO_MANIFEST_DIR").to_string() + "/../swagger-ui/examples/openapi.json";
 
         println!("Loading {}", path);
 

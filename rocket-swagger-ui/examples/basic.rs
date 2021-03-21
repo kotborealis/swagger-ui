@@ -11,7 +11,7 @@ fn main() {
                rocket_swagger_ui::routes(
                    // Specify file with openapi specification,
                    // relative to current file
-                   swagger_ui::swagger_spec_file!("./openapi.json"),
+                   swagger_ui::swagger_spec_file!("../../swagger-ui/examples/openapi.json"),
                    swagger_ui::Config { ..Default::default() }
                )
         )

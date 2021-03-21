@@ -6,11 +6,14 @@
     <cargoProject FILE="$PROJECT_DIR$/examples/rocker-swagger-ui/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Bumped version">
+    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Refactoring">
+      <change afterPath="$PROJECT_DIR$/swagger-ui/examples/basic.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/swagger-ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/swagger-ui.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/examples/openapi.json" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/examples/openapi.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/build.rs" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/build.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,8 +64,26 @@
       <recent name="C:\projects\rs\swagger-ui\examples" />
       <recent name="C:\projects\rs\swagger-ui\examples\rocker-swagger-ui" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\rs\swagger-ui\swagger-ui\examples" />
+    </key>
   </component>
-  <component name="RunManager" selected="Cargo.test rocket-swagger-ui">
+  <component name="RunManager" selected="Cargo.examples/rocket-swagger-ui">
+    <configuration name="Run basic" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="run --package swagger-ui --example basic" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="examples/rocket-swagger-ui" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="run --package rocket-swagger-ui --example basic" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -112,10 +133,12 @@
       <item itemvalue="Cargo.test swagger-ui" />
       <item itemvalue="Cargo.test rocket-swagger-ui" />
       <item itemvalue="Cargo.examples/rocket-swagger-ui" />
+      <item itemvalue="Cargo.Run basic" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Cargo.examples/rocket-swagger-ui" />
+        <item itemvalue="Cargo.Run basic" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616345425832</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Refactoring">
+      <created>1616348062170</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1616348062170</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,6 +337,7 @@
     <MESSAGE value="Updated cargo.toml: version 0.1.2" />
     <MESSAGE value="Updated tests" />
     <MESSAGE value="Bumped version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bumped version" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
 </project>
