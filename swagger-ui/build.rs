@@ -1,13 +1,14 @@
 extern crate reqwest;
 
-use std::io::copy;
+use std::io::Write;
 use std::fs::File;
 use std::fs::remove_file;
 use std::env;
 use flate2::read::GzDecoder;
 use tar::Archive;
 
-fn main() {
+#[tokio::main]
+async fn main() -> Result<(), reqwest::Error> {
     println!("cargo:rerun-if-changed=build.rs");
 
     let swagger_ui_version = "3.45.1";
@@ -17,11 +18,11 @@ fn main() {
             swagger_ui_version
         );
 
-    let mut resp = reqwest::get(&target).expect("request failed");
+    let resp = reqwest::get(&target).await.unwrap();
 
     let dist = env::var("OUT_DIR").unwrap() + "/swagger-ui-dist.tgz";
     let mut out = File::create(&dist).expect("failed to create file");
-    copy(&mut resp, &mut out).expect("failed to copy content");
+    out.write_all(&*(resp.bytes().await.unwrap())).unwrap();
 
     let dist = File::open(dist).unwrap();
     let dist = GzDecoder::new(dist);
@@ -50,4 +51,6 @@ fn main() {
     }
 
     println!("cargo:rustc-env=SWAGGER_UI_DIST_PATH={}", dist);
+
+    Ok(())
 }
