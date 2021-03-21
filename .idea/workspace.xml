@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Added rust-embed to pack swagger-ui assets into binary">
-      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/swagger-ui-assets.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/swagger-ui.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616323789880</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactoring; added rocket-* crate">
+      <created>1616325783633</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616325783633</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +148,7 @@
     <MESSAGE value="Updated Cargo.toml to include description and license" />
     <MESSAGE value="Added build script to download swagger-ui-dist" />
     <MESSAGE value="Added rust-embed to pack swagger-ui assets into binary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added rust-embed to pack swagger-ui assets into binary" />
+    <MESSAGE value="Refactoring; added rocket-* crate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring; added rocket-* crate" />
   </component>
 </project>

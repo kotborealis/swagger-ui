@@ -3,6 +3,11 @@ name = "rocket-swagger-ui"
 version = "0.1.0"
 authors = ["kotborealis <kotborealis@awooo.ru>"]
 edition = "2018"
+exclude = [
+    ".idea"
+]
+description = "Swagger-ui for rust applications with rocket integration"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
