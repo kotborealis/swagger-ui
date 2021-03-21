@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Added rust-embed to pack swagger-ui assets into binary">
+      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/swagger-ui-assets.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swagger-ui/swagger-ui.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="c1grhg1c" />
+  </component>
+  <component name="ProjectId" id="1q3r8E77NcUo7MB39UcJgtZthEi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+  </component>
+  <component name="RunManager" selected="Cargo.test swagger-ui">
+    <configuration name="test rocket-swagger-ui" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="test --package rocket-swagger-ui --lib tests" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test swagger-ui" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="test --package swagger-ui --lib tests" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Cargo.test swagger-ui" />
+      <item itemvalue="Cargo.test rocket-swagger-ui" />
+    </list>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="" />
+      <created>1616318956008</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616318956008</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1616318995265</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616318995266</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added exclude to cargo.toml to exclude ide generated files in crate">
+      <created>1616319170908</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616319170908</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated Cargo.toml to include description and license">
+      <created>1616319330343</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616319330343</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added build script to download swagger-ui-dist">
+      <created>1616323776407</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616323776407</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added rust-embed to pack swagger-ui assets into binary">
+      <created>1616323789880</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616323789880</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Added exclude to cargo.toml to exclude ide generated files in crate" />
+    <MESSAGE value="Updated Cargo.toml to include description and license" />
+    <MESSAGE value="Added build script to download swagger-ui-dist" />
+    <MESSAGE value="Added rust-embed to pack swagger-ui assets into binary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rust-embed to pack swagger-ui assets into binary" />
+  </component>
+</project>

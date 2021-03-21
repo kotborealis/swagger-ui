@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/swagger-ui.iml" filepath="$PROJECT_DIR$/swagger-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/swagger-ui.iml" filepath="$PROJECT_DIR$/.idea/swagger-ui.iml" />
     </modules>
   </component>
 </project>
