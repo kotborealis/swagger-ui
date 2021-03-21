@@ -28,4 +28,4 @@ rust-embed = { version = "5.9.0", features = ["interpolate-folder-path"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0.64"
 
-rocket-swagger-ui = { version = "0.1.4", optional = true }
+rocket-swagger-ui = { version = "0.1", optional = true }

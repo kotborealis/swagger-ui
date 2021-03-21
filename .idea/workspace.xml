@@ -6,7 +6,7 @@
     <cargoProject FILE="$PROJECT_DIR$/examples/rocker-swagger-ui/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Added github workflow">
+    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Updated cargo.toml versions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-ui/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/Cargo.toml" afterDir="false" />
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616340110732</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updated cargo.toml versions">
+      <created>1616349643735</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616349643735</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +227,7 @@
     <MESSAGE value="First working version" />
     <MESSAGE value="added readme &amp; docs" />
     <MESSAGE value="Added github workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added github workflow" />
+    <MESSAGE value="Updated cargo.toml versions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated cargo.toml versions" />
   </component>
 </project>
