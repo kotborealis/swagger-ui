@@ -17,3 +17,4 @@ flate2 = "1.0.20"
 tar = "0.4.33"
 
 [dependencies]
+rust-embed = { version = "5.9.0", features = ["interpolate-folder-path"] }
