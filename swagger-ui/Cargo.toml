@@ -8,6 +8,8 @@ exclude = [
 ]
 description = "Swagger-ui for rust applications"
 license = "MIT"
+documentation = "https://docs.rs/swagger-ui/"
+repository = "https://github.com/kotborealis/swagger-ui"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
