@@ -1,20 +1,4 @@
-[package]
-name = "swagger-ui"
-version = "0.1.0"
-authors = ["kotborealis <kotborealis@awooo.ru>"]
-edition = "2018"
-exclude = [
-    ".idea"
+[workspace]
+members = [
+    "swagger-ui-assets"
 ]
-description = "Swagger-ui for rust applications"
-license = "MIT"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[build-dependencies]
-reqwest = "0.7.3"
-flate2 = "1.0.20"
-tar = "0.4.33"
-
-[dependencies]
-rust-embed = { version = "5.9.0", features = ["interpolate-folder-path"] }
