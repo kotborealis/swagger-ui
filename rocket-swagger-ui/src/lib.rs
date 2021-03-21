@@ -3,7 +3,7 @@ mod handlers;
 use rocket::http::{ContentType};
 use rocket::{Route};
 use crate::handlers::{ContentHandler, RedirectHandler};
-use swagger_ui::{SwaggerUiAssets, Config, Spec};
+use swagger_ui::{Assets, Config, Spec};
 use std::path::Path;
 
 fn mime_type(filename: &str) -> ContentType {
@@ -21,23 +21,11 @@ fn mime_type(filename: &str) -> ContentType {
     }
 }
 
-fn swagger_config_url() -> String {
-    "swagger-ui-config.json".to_string()
-}
-
-fn patch_index(content: Vec<u8>) -> Vec<u8> {
-    let content = String::from_utf8(content).unwrap();
-    Vec::from(content.replace(
-        "url: \"https://petstore.swagger.io/v2/swagger.json\"",
-        &*format!("configUrl: \"{}\"", swagger_config_url())
-    ))
-}
-
 pub fn routes(spec: Spec, mut config: Config) -> Vec<Route> {
     let spec_handler =
         ContentHandler::bytes(
             mime_type(spec.name.as_str()),
-            Vec::from(spec.content)
+            Vec::from(spec.content),
         );
 
     let spec_name: &str =
@@ -52,26 +40,20 @@ pub fn routes(spec: Spec, mut config: Config) -> Vec<Route> {
     let config_handler = ContentHandler::json(&config);
 
     let mut routes = vec![
-        config_handler.into_route(format!("/{}", swagger_config_url())),
+        config_handler.into_route(format!("/{}", "swagger-ui-config.json")),
         spec_handler.into_route(format!("/{}", spec_name)),
         RedirectHandler::to("index.html").into_route("/"),
     ];
 
-    for file in SwaggerUiAssets::iter() {
+    for file in Assets::iter() {
         let filename = file.as_ref();
         let mime_type = mime_type(filename);
 
-        let content: Vec<u8> = SwaggerUiAssets::get(filename).unwrap().into_owned();
-
-        // patch index.html to use our config file
-        let content = match filename {
-            "index.html" => patch_index(content),
-            _ => content
-        };
+        let content: Vec<u8> = Assets::get(filename).unwrap().into_owned();
 
         let path = format!("/{}", filename);
         let handler = ContentHandler::bytes(mime_type, content);
-        let route = handler .into_route(path);
+        let route = handler.into_route(path);
 
         routes.push(route);
     };
@@ -91,18 +73,15 @@ mod tests {
                    super::routes(
                        // Specify file with openapi specification,
                        // relative to current file
-                       swagger_ui::swagger_spec_file!("../examples/openapi.json"),
-                       swagger_ui::Config { ..Default::default() }
-                   )
+                       swagger_ui::swagger_spec_file!("../../swagger-ui/examples/openapi.json"),
+                       swagger_ui::Config { ..Default::default() },
+                   ),
             )
     }
 
     #[test]
     fn swagger_ui() {
         let client = Client::new(ignite()).expect("valid rocket instance");
-        let response = client.get("/").dispatch();
-        assert_eq!(response.status(), Status::NotFound);
-
 
         let response = client.get("/api/v1/swagger").dispatch();
         assert_eq!(response.status(), Status::SeeOther);
@@ -110,10 +89,13 @@ mod tests {
         let response = client.get("/api/v1/swagger/index.html").dispatch();
         assert_eq!(response.status(), Status::Ok);
 
+        let response = client.get("/api/v1/swagger/swagger-ui-config.json").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+
         let mut response = client.get("/api/v1/swagger/openapi.json").dispatch();
         assert_eq!(response.status(), Status::Ok);
 
-        let path = env!("CARGO_MANIFEST_DIR").to_string() + "/examples/openapi.json";
+        let path = env!("CARGO_MANIFEST_DIR").to_string() + "/../swagger-ui/examples/openapi.json";
 
         println!("Loading {}", path);
 
