@@ -6,11 +6,9 @@
     <cargoProject FILE="$PROJECT_DIR$/examples/rocker-swagger-ui/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="First working version">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rocket-swagger-ui/README.md" afterDir="false" />
+    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="added readme &amp; docs">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/rust.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/examples/basic.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616336395746</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added readme &amp; docs">
+      <created>1616336859107</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616336859107</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +211,7 @@
     <MESSAGE value="Refactoring; added rocket-* crate" />
     <MESSAGE value="Added metadata to rocket-swagger-ui" />
     <MESSAGE value="First working version" />
-    <option name="LAST_COMMIT_MESSAGE" value="First working version" />
+    <MESSAGE value="added readme &amp; docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added readme &amp; docs" />
   </component>
 </project>
