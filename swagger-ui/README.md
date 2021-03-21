@@ -9,7 +9,7 @@ embeds it into your binary, using [rust-embed](https://crates.io/crates/rust-emb
 
 It also provides bindings for [rocket](https://rocket.rs).
 
-![swagger-ui petstore](../doc/swagger-ui.png)
+![swagger-ui petstore](https://github.com/kotborealis/swagger-ui/blob/master/doc/swagger-ui.png?raw=true)
 
 ## Usage
 

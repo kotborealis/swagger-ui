@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 
 /// Assets from swagger-ui-dist
 #[derive(RustEmbed)]
-#[folder = "$SWAGGER_UI_DIST_PATH"]
+#[folder = "./dist/"]
 pub struct Assets;
 
 /// Contains a named url.
@@ -178,13 +178,9 @@ mod tests {
 
     #[test]
     fn swagger_ui_dist_exists() {
-        let dist = env!("SWAGGER_UI_DIST_PATH");
-        println!("Checking if dist env var is set ({})", dist);
-        assert!(!dist.is_empty());
-
         println!("Checking if assets exists");
         for file in &asset_list() {
-            let asset = format!("{}/{}", dist, file);
+            let asset = format!("dist/{}", file);
             println!("\t{}", asset);
             assert!(Path::new(&asset).exists());
         }

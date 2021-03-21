@@ -3,13 +3,11 @@
 Swagger-ui is a crate to use in rust web-servers to render
 OpenAPI specification, using [swagger-ui JS library](https://www.npmjs.com/package/swagger-ui).
 
-This crate downloads [swagger-ui-dist](https://www.npmjs.com/package/swagger-ui-dist) from npm 
-during build and 
-embeds it into your binary, using [rust-embed](https://crates.io/crates/rust-embed).
+This crate embeds [swagger-ui-dist](https://www.npmjs.com/package/swagger-ui-dist) into your binary, using [rust-embed](https://crates.io/crates/rust-embed).
 
 It also provides bindings for [rocket](https://rocket.rs).
 
-![swagger-ui petstore](./doc/swagger-ui.png)
+![swagger-ui petstore](https://github.com/kotborealis/swagger-ui/blob/master/doc/swagger-ui.png?raw=true)
 
 ## Usage
 
