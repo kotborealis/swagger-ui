@@ -81,8 +81,43 @@ pub fn routes(spec: Spec, mut config: Config) -> Vec<Route> {
 
 #[cfg(test)]
 mod tests {
+    use rocket;
+    use rocket::local::Client;
+    use rocket::http::Status;
+
+    fn ignite() -> rocket::Rocket {
+        rocket::ignite()
+            .mount("/api/v1/swagger/",
+                   super::routes(
+                       // Specify file with openapi specification,
+                       // relative to current file
+                       swagger_ui::swagger_spec_file!("../examples/openapi.json"),
+                       swagger_ui::Config { ..Default::default() }
+                   )
+            )
+    }
+
     #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
+    fn swagger_ui() {
+        let client = Client::new(ignite()).expect("valid rocket instance");
+        let response = client.get("/").dispatch();
+        assert_eq!(response.status(), Status::NotFound);
+
+
+        let response = client.get("/api/v1/swagger").dispatch();
+        assert_eq!(response.status(), Status::SeeOther);
+
+        let response = client.get("/api/v1/swagger/index.html").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+
+        let mut response = client.get("/api/v1/swagger/openapi.json").dispatch();
+        assert_eq!(response.status(), Status::Ok);
+        assert_eq!(
+            response.body_string().unwrap(),
+            String::from_utf8(std::fs::read(
+                    env!("CARGO_MANIFEST_DIR").to_string()
+                        + "./examples/openapi.json"
+            ).unwrap()).unwrap()
+        );
     }
 }

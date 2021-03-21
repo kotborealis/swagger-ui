@@ -6,10 +6,9 @@
     <cargoProject FILE="$PROJECT_DIR$/examples/rocker-swagger-ui/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="added readme &amp; docs">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/rust.yml" afterDir="false" />
+    <list default="true" id="98e8595e-6fa9-43d4-9d19-ce3779c02fa7" name="Default Changelist" comment="Added github workflow">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/rocket-swagger-ui/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,7 @@
       <recent name="C:\projects\rs\swagger-ui\examples\rocker-swagger-ui" />
     </key>
   </component>
-  <component name="RunManager" selected="Cargo.examples/rocket-swagger-ui">
+  <component name="RunManager" selected="Cargo.test rocket-swagger-ui">
     <configuration name="examples/rocket-swagger-ui" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="run --package rocket-swagger-ui --example basic" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -187,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616336859107</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added github workflow">
+      <created>1616340110732</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616340110732</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +218,7 @@
     <MESSAGE value="Added metadata to rocket-swagger-ui" />
     <MESSAGE value="First working version" />
     <MESSAGE value="added readme &amp; docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="added readme &amp; docs" />
+    <MESSAGE value="Added github workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added github workflow" />
   </component>
 </project>
