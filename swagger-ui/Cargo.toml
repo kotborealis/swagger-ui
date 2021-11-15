@@ -16,6 +16,7 @@ repository = "https://github.com/kotborealis/swagger-ui"
 [features]
 default = []
 rocket = ["rocket-swagger-ui"]
+# actix-web = ["actix-web-swagger-ui"]
 
 [dependencies]
 rust-embed = { version = "5.9.0", features = ["interpolate-folder-path"] }
@@ -23,3 +24,4 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0.64"
 
 rocket-swagger-ui = { version = "0.1", optional = true }
+# actix-web-swagger-ui = { version = "0.1", optional = true }
