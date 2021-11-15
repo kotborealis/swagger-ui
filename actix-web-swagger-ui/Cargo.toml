@@ -1,0 +1,23 @@
+[package]
+name = "actix-web-swagger-ui"
+version = "0.1.0"
+authors = ["Tarkin25 <severin.weigold@edu.tbz.ch>"]
+edition = "2018"
+exclude = [
+    ".idea"
+]
+description = "Swagger-ui for rust applications with actix-web integration"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+swagger-ui = { version = "0.1", path = "../swagger-ui" }
+actix-web = "4.0.0-beta.10"
+actix-files = "0.5"
+actix-utils = "3.0"
+serde = { version = "1.0" }
+
+[dev-dependencies]
+actix-rt = "2.4.0"
+actix-http = "3.0.0-beta.11"

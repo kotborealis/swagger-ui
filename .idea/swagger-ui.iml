@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/swagger-ui/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/swagger-ui/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/swagger-ui-dist/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/actix-web-swagger-ui/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/actix-web-swagger-ui/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
