@@ -6,6 +6,8 @@ use actix_web::{HttpRequest, HttpResponse, Route};
 
 use swagger_ui::{Assets, Config, Spec};
 
+const CONFIG_FILE_PATH: &str = "/swagger-ui-config.json";
+
 /// Returns a function which configures an `App` or a `Scope` to serve the swagger-ui page displaying the given `Spec`
 pub fn swagger(spec: Spec, config: Config) -> impl FnOnce(&mut ServiceConfig) {
     let mut routes: Vec<(String, Route)> = vec![];
@@ -37,7 +39,7 @@ pub fn swagger(spec: Spec, config: Config) -> impl FnOnce(&mut ServiceConfig) {
 
 fn config_route(config: Config, spec_name: String) -> Route {
     web::to(move |req: HttpRequest| {
-        let path = req.path();
+        let path = req.path().replace(CONFIG_FILE_PATH, "");
         let mut config = config.clone();
         config.url = format!("{}/{}", path, &spec_name);
 
@@ -60,7 +62,7 @@ fn index_route() -> Route {
     web::to(|req: HttpRequest| {
         let path = req.path();
 
-        let config_url = format!("{}/swagger-ui-config.json", path);
+        let config_url = format!("{}{}", path, CONFIG_FILE_PATH);
         let index_url = format!("{}/index.html?configUrl={}", path, config_url);
 
         HttpResponse::Found()
