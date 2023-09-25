@@ -2,7 +2,7 @@
 name = "actix-web-swagger-ui"
 version = "0.1.0"
 authors = ["Tarkin25 <severin.weigold@edu.tbz.ch>"]
-edition = "2018"
+edition = "2021"
 exclude = [
     ".idea"
 ]
