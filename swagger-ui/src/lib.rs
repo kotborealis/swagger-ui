@@ -179,16 +179,6 @@ mod tests {
     }
 
     #[test]
-    fn swagger_ui_dist_exists() {
-        println!("Checking if assets exists");
-        for file in &asset_list() {
-            let asset = format!("dist/{}", file);
-            println!("\t{}", asset);
-            assert!(Path::new(&asset).exists());
-        }
-    }
-
-    #[test]
     fn swagger_ui_assets() {
         println!("Checking if assets exists in binary");
         for asset in &asset_list() {
