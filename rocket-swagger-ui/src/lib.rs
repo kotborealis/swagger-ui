@@ -24,12 +24,12 @@ fn mime_type(filename: &str) -> ContentType {
 pub fn routes(spec: Spec, mut config: Config) -> Vec<Route> {
     let spec_handler =
         ContentHandler::bytes(
-            mime_type(spec.name.as_str()),
-            Vec::from(spec.content),
+            mime_type(spec.name.as_ref()),
+            spec.content.into_owned(),
         );
 
     let spec_name: &str =
-        Path::new(&spec.name)
+        Path::new(spec.name.as_ref())
             .file_name()
             .unwrap_or("openapi.json".as_ref())
             .to_str()

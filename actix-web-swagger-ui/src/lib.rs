@@ -49,7 +49,7 @@ fn config_route(config: Config, spec_name: String) -> Route {
 
 fn spec_route(spec: Spec) -> Route {
     let content_type = content_type(&spec.name);
-    let content = Vec::from(spec.content);
+    let content = spec.content.into_owned();
 
     web::to(move || {
         HttpResponse::Ok()
