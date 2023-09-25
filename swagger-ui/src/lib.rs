@@ -1,9 +1,10 @@
+use std::borrow::Cow;
 use rust_embed::RustEmbed;
 use serde::{Deserialize, Serialize};
 
 /// Assets from swagger-ui-dist
 #[derive(RustEmbed)]
-#[folder = "./dist/"]
+#[folder = "$CARGO_MANIFEST_DIR/.dist"]
 pub struct Assets;
 
 /// Contains a named url.
@@ -58,11 +59,12 @@ pub enum Filter {
 }
 
 /// Used to represent openapi specification file
+#[derive(Debug, Clone)]
 pub struct Spec {
     /// Spec file name
-    pub name: String,
+    pub name: Cow<'static, str>,
     /// Spec file content
-    pub content: &'static [u8]
+    pub content: Cow<'static, [u8]>
 }
 
 /// Macro used to create `Spec` struct,
@@ -71,8 +73,8 @@ pub struct Spec {
 macro_rules! swagger_spec_file {
     ($name: literal) => {
         swagger_ui::Spec {
-            name: $name.to_string(),
-            content: include_bytes!($name)
+            name: std::borrow::Cow::Borrowed($name),
+            content: std::borrow::Cow::Borrowed(include_bytes!($name))
         }
     };
 }
