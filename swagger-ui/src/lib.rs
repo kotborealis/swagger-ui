@@ -72,8 +72,8 @@ pub struct Spec {
 #[macro_export]
 macro_rules! swagger_spec_file {
     ($name: literal) => {
-        swagger_ui::Spec {
-            name: std::borrow::Cow::Borrowed($name),
+        $crate::Spec {
+            name: std::borrow::Cow::Borrowed(($name).split("/").last().unwrap()),
             content: std::borrow::Cow::Borrowed(include_bytes!($name))
         }
     };
@@ -186,5 +186,11 @@ mod tests {
             let data = Assets::get(&asset).unwrap();
             assert!(!data.is_empty());
         }
+    }
+
+    #[test]
+    fn swagger_ui_macro_name() {
+        let spec = swagger_spec_file!("../examples/openapi.json");
+        assert_eq!(&spec.name, "openapi.json")
     }
 }
