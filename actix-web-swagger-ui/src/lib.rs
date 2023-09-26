@@ -1,5 +1,5 @@
 use actix_files::file_extension_to_mime;
-use actix_utils::future::ok;
+use actix_utils::future::{ok, ready};
 use actix_web::http::header::{ContentType, LOCATION};
 use actix_web::web::{self, ServiceConfig};
 use actix_web::{HttpRequest, HttpResponse, Route};
@@ -12,15 +12,15 @@ const CONFIG_FILE_PATH: &str = "/swagger-ui-config.json";
 pub fn swagger(spec: Spec, config: Config) -> impl FnOnce(&mut ServiceConfig) {
     let mut routes: Vec<(String, Route)> = vec![];
 
-    let config_route = config_route(config, spec.name.clone());
-    routes.push(("/swagger-ui-config.json".into(), config_route));
+    let config_route = config_route(config, spec.name.clone().into_owned());
+    routes.push(("/swagger-ui-config.json".to_owned(), config_route));
 
-    let spec_path = spec.name.clone();
+    let spec_path = spec.name.clone().into_owned();
     let spec_route = spec_route(spec);
     routes.push((spec_path, spec_route));
 
     let index_route = index_route();
-    routes.push(("".into(), index_route));
+    routes.push(("".to_owned(), index_route));
 
     for file in Assets::iter() {
         let filename = file.as_ref();
@@ -43,18 +43,18 @@ fn config_route(config: Config, spec_name: String) -> Route {
         let mut config = config.clone();
         config.url = format!("{}/{}", path, &spec_name);
 
-        HttpResponse::Ok().json(config)
+        ready(HttpResponse::Ok().json(config))
     })
 }
 
 fn spec_route(spec: Spec) -> Route {
     let content_type = content_type(&spec.name);
-    let content = Vec::from(spec.content);
+    let content = spec.content.into_owned();
 
     web::to(move || {
-        HttpResponse::Ok()
+        ready(HttpResponse::Ok()
             .content_type(content_type.clone())
-            .body(content.clone())
+            .body(content.clone()))
     })
 }
 
@@ -65,9 +65,9 @@ fn index_route() -> Route {
         let config_url = format!("{}{}", path, CONFIG_FILE_PATH);
         let index_url = format!("{}/index.html?configUrl={}", path, config_url);
 
-        HttpResponse::Found()
+        ready(HttpResponse::Found()
             .append_header((LOCATION, index_url))
-            .finish()
+            .finish())
     })
 }
 
@@ -101,8 +101,7 @@ fn extension(filename: &str) -> &str {
 mod tests {
     use std::fs;
     use actix_http::Request;
-    use actix_web::body::Body;
-    use actix_web::{http, test::{TestRequest, call_service, init_service, read_body}, web::scope, App};
+    use actix_web::{ test::{TestRequest, call_service, init_service, read_body}, web::scope, App};
     use actix_web::dev::ServiceResponse;
     use actix_web::web::Bytes;
 
@@ -111,8 +110,8 @@ mod tests {
     macro_rules! init_app {
         ($scope:expr) => {{
             let spec = Spec {
-                name: "openapi.json".into(),
-                content: include_bytes!("../../swagger-ui/examples/openapi.json"),
+                name: std::borrow::Cow::Borrowed("openapi.json"),
+                content: std::borrow::Cow::Borrowed(include_bytes!("../../swagger-ui/examples/openapi.json")),
             };
             let config = Config::default();
             let app = App::new()

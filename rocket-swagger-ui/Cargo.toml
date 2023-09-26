@@ -2,7 +2,7 @@
 name = "rocket-swagger-ui"
 version = "0.1.5"
 authors = ["kotborealis <kotborealis@awooo.ru>"]
-edition = "2018"
+edition = "2021"
 exclude = [
     ".idea"
 ]
@@ -18,3 +18,4 @@ swagger-ui = { version = "0.1", path = "../swagger-ui" }
 rocket = "0.4.7"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0.64"
+derive_builder = "0.12.0"

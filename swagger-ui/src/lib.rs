@@ -1,9 +1,10 @@
+use std::borrow::Cow;
 use rust_embed::RustEmbed;
 use serde::{Deserialize, Serialize};
 
 /// Assets from swagger-ui-dist
 #[derive(RustEmbed)]
-#[folder = "./dist/"]
+#[folder = "$CARGO_MANIFEST_DIR/.dist"]
 pub struct Assets;
 
 /// Contains a named url.
@@ -58,11 +59,12 @@ pub enum Filter {
 }
 
 /// Used to represent openapi specification file
+#[derive(Debug, Clone)]
 pub struct Spec {
     /// Spec file name
-    pub name: String,
+    pub name: Cow<'static, str>,
     /// Spec file content
-    pub content: &'static [u8]
+    pub content: Cow<'static, [u8]>
 }
 
 /// Macro used to create `Spec` struct,
@@ -70,9 +72,9 @@ pub struct Spec {
 #[macro_export]
 macro_rules! swagger_spec_file {
     ($name: literal) => {
-        swagger_ui::Spec {
-            name: $name.to_string(),
-            content: include_bytes!($name)
+        $crate::Spec {
+            name: std::borrow::Cow::Borrowed(($name).split("/").last().unwrap()),
+            content: std::borrow::Cow::Borrowed(include_bytes!($name))
         }
     };
 }
@@ -177,16 +179,6 @@ mod tests {
     }
 
     #[test]
-    fn swagger_ui_dist_exists() {
-        println!("Checking if assets exists");
-        for file in &asset_list() {
-            let asset = format!("dist/{}", file);
-            println!("\t{}", asset);
-            assert!(Path::new(&asset).exists());
-        }
-    }
-
-    #[test]
     fn swagger_ui_assets() {
         println!("Checking if assets exists in binary");
         for asset in &asset_list() {
@@ -194,5 +186,11 @@ mod tests {
             let data = Assets::get(&asset).unwrap();
             assert!(!data.is_empty());
         }
+    }
+
+    #[test]
+    fn swagger_ui_macro_name() {
+        let spec = swagger_spec_file!("../examples/openapi.json");
+        assert_eq!(&spec.name, "openapi.json")
     }
 }
