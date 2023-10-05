@@ -2,6 +2,8 @@ use std::borrow::Cow;
 use rust_embed::RustEmbed;
 use serde::{Deserialize, Serialize};
 
+pub use bytes::Bytes;
+
 /// Assets from swagger-ui-dist
 #[derive(RustEmbed)]
 #[folder = "$CARGO_MANIFEST_DIR/.dist"]
@@ -64,7 +66,32 @@ pub struct Spec {
     /// Spec file name
     pub name: Cow<'static, str>,
     /// Spec file content
-    pub content: Cow<'static, [u8]>
+    pub content: Bytes
+}
+
+/// Helper type to accept both provided or existing spec
+#[derive(Debug, Clone)]
+pub enum SpecOrUrl {
+    Spec(Spec),
+    Url(Cow<'static, str>)
+}
+
+impl From<Spec> for SpecOrUrl {
+    fn from(value: Spec) -> Self {
+        Self::Spec(value)
+    }
+}
+
+impl From<String> for SpecOrUrl {
+    fn from(value: String) -> Self {
+        Self::Url(value.into())
+    }
+}
+
+impl From<&'static str> for SpecOrUrl {
+    fn from(value: &'static str) -> Self {
+        Self::Url(Cow::Borrowed(value))
+    }
 }
 
 /// Macro used to create `Spec` struct,
@@ -74,7 +101,7 @@ macro_rules! swagger_spec_file {
     ($name: literal) => {
         $crate::Spec {
             name: std::borrow::Cow::Borrowed(($name).split("/").last().unwrap()),
-            content: std::borrow::Cow::Borrowed(include_bytes!($name))
+            content: $crate::Bytes::from_static(include_bytes!($name))
         }
     };
 }

@@ -49,7 +49,7 @@ fn config_route(config: Config, spec_name: String) -> Route {
 
 fn spec_route(spec: Spec) -> Route {
     let content_type = content_type(&spec.name);
-    let content = spec.content.into_owned();
+    let content = spec.content;
 
     web::to(move || {
         ready(HttpResponse::Ok()
@@ -104,15 +104,13 @@ mod tests {
     use actix_web::{ test::{TestRequest, call_service, init_service, read_body}, web::scope, App};
     use actix_web::dev::ServiceResponse;
     use actix_web::web::Bytes;
+    use swagger_ui::swagger_spec_file;
 
     use super::*;
 
     macro_rules! init_app {
         ($scope:expr) => {{
-            let spec = Spec {
-                name: std::borrow::Cow::Borrowed("openapi.json"),
-                content: std::borrow::Cow::Borrowed(include_bytes!("../../swagger-ui/examples/openapi.json")),
-            };
+            let spec = swagger_spec_file!("../../swagger-ui/examples/openapi.json");
             let config = Config::default();
             let app = App::new()
                 .service(scope($scope).configure(swagger(spec, config)));

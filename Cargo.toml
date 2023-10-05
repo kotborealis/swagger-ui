@@ -2,5 +2,6 @@
 members = [
     "swagger-ui",
     "rocket-swagger-ui",
-    "actix-web-swagger-ui"
+    "actix-web-swagger-ui",
+    "axum-swagger-ui"
 ]

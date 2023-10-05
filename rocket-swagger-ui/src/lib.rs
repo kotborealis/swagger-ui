@@ -25,7 +25,7 @@ pub fn routes(spec: Spec, mut config: Config) -> Vec<Route> {
     let spec_handler =
         ContentHandler::bytes(
             mime_type(spec.name.as_ref()),
-            spec.content.into_owned(),
+            spec.content.into(),
         );
 
     let spec_name: &str =
