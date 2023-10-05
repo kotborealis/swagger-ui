@@ -1,0 +1,22 @@
+[package]
+name = "axum-swagger-ui"
+version = "0.1.0"
+edition = "2021"
+authors = ["Wicpar"]
+description = "Swagger-ui for rust applications with axum integration"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+swagger-ui = { version = "0.1", path = "../swagger-ui" }
+axum = { version = "0.6", features = ["headers"] }
+mime = "0.3"
+mime_guess = "2.0"
+
+[dev-dependencies]
+tokio = "1.32.0"
+hyper = { version = "0.14", features = ["full"] }
+tower = { version = "0.4", features = ["util"] }
+tower-http = { version = "0.4.0"}
+serde_json = "1.0"
